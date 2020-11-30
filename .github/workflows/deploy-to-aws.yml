@@ -39,7 +39,7 @@ jobs:
               repo: context.repo.repo,
               body: ':rocket: Kicking off deployment on ' + cloud + ' for ' + customer + ' now. [View deployment live logs](' +  log_url + ').'
             })
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2.3.4
         with:
           ref: '${{github.event.deployment.payload.customerNormalized}}'
       - name: Set up Ruby 2.6

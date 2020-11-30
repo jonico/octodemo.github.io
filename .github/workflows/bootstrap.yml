@@ -6,7 +6,7 @@ jobs:
     if: endsWith(github.ref, '/master') && github.repository != 'octodemo/octodemo.github.io' && !startsWith(github.repository,'jonico/')
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2.3.4
     - name: Bootstrap repo
       run: ./scripts/bootstrap.sh
       env:
