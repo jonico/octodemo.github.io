@@ -47,7 +47,7 @@ GEM
       jekyll (~> 3.5)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
-    nokogiri (1.10.0)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -71,7 +71,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.8.5)
   minima (= 2.5.0)
-  nokogiri (= 1.10.0)
+  nokogiri (= 1.10.8)
   rake
 
 BUNDLED WITH
