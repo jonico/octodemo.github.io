@@ -14,4 +14,4 @@ gem "jekyll", "3.8.5"
 gem "minima", "2.5.0"
 
 gem "rake"
-gem "nokogiri", "1.10.0"
+gem "nokogiri", "1.10.10"
