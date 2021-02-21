@@ -36,6 +36,6 @@ jobs:
         matrix:
           x: ${{ fromJson(needs.generate-matrix.outputs.x) }}
           y: ${{ fromJson(needs.generate-matrix.outputs.y) }}
-steps:
-      - name: Perform job
-        run: echo "${{matrix.x}}, ${{matrix.y}}"
+      steps:
+            - name: Perform job
+              run: echo "${{matrix.x}}, ${{matrix.y}}"
