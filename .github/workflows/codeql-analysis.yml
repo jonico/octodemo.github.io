@@ -23,7 +23,7 @@ jobs:
         default: false
     - name: Checkout repository
       if: steps.code_scanning_flag.outputs.value == 'true'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.3.4
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
