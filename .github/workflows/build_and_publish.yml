@@ -10,7 +10,7 @@ jobs:
       enablecontainerscanning: ${{ steps.enablecontainerscanning.outputs.enablecontainerscanning }}
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v2.3.4
     - name: Cache node modules
       uses: actions/cache@v1
       with:
@@ -55,7 +55,7 @@ jobs:
     if: needs.build.outputs.enablecontainerscanning == 'true'
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.3.4
     - name: Retrieve image
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
