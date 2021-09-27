@@ -8,7 +8,7 @@ jobs:
     if: startsWith(github.event.issue.title, 'Deploy Octocat Generator on') && startsWith(github.event.comment.body, '/approve') && github.event.issue.user.login == github.event.comment.user.login
     steps:
       - name: Need approval from somebody else
-        uses: actions/github-script@0.5.0
+        uses: actions/github-script@v5
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
@@ -23,7 +23,7 @@ jobs:
     if: startsWith(github.event.issue.title, 'Deploy Octocat Generator on') && startsWith(github.event.comment.body, '/approve') && github.event.issue.user.login != github.event.comment.user.login
     steps:
       - name: Approval granted
-        uses: actions/github-script@0.5.0
+        uses: actions/github-script@v5
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
@@ -34,7 +34,7 @@ jobs:
               body: '👋 @' + context.actor + ', approval granted, creating deployment request ...'
             })
       - name: Kicking off deployment
-        uses: actions/github-script@0.5.0
+        uses: actions/github-script@v5
         env:
           title: ${{ github.event.issue.title }}
           body: ${{ github.event.issue.body }}
