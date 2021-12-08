@@ -28,7 +28,7 @@ jobs:
         npm install write-good
         ./node_modules/.bin/write-good ${GITHUB_WORKSPACE}/README.md --parse
     - name: Publish custom octocat
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v2.3.0
       with:
         name: custom-octocat-${{ github.sha }}
         path: assets/images/base-octocat.svg
