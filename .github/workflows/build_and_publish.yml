@@ -20,7 +20,7 @@ jobs:
           ${{ runner.os }}-build-${{ env.cache-name }}-
           ${{ runner.os }}-build-
           ${{ runner.os }}-
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v2.5.1
       with:
         node-version: '10.x'
     - name: Test
