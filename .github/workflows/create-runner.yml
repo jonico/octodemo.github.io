@@ -9,7 +9,7 @@ jobs:
     if: startsWith(github.event.issue.title, 'Create self-hosted runner')
     steps:
       - name: Kickoff deployment of self-hosted runner
-        uses: actions/github-script@v2
+        uses: actions/github-script@v5.1.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
@@ -19,7 +19,7 @@ jobs:
               body: `👋 @${context.actor} creating a self-hosted runner...`
             })
       - name: Kicking off deployment of runner
-        uses: actions/github-script@v2
+        uses: actions/github-script@v5.1.0
         with:
           github-token: ${{secrets.RDP_TOKEN}}
           script: |

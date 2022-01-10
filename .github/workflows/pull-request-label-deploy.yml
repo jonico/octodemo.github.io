@@ -31,7 +31,7 @@ jobs:
         github.event.label.name == 'aws'
     steps:
     - name: ACK deployment request
-      uses: actions/github-script@0.5.0
+      uses: actions/github-script@v5.1.0
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
@@ -42,7 +42,7 @@ jobs:
             body: '👋 @' + context.actor + ', deployment request for ${{ github.event.label.name }} received ...'
           })
     - name: Kicking off deployment
-      uses: actions/github-script@0.5.0
+      uses: actions/github-script@v5.1.0
       env:
         cloud: ${{ github.event.label.name }}
         customer: ${{ github.event.pull_request.head.ref }}
