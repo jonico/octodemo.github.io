@@ -39,7 +39,7 @@ jobs:
     - name: Update issue
       env:
         issue_number: '${{github.event.client_payload.issue}}'
-      uses: actions/github-script@v2
+      uses: actions/github-script@v6
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |

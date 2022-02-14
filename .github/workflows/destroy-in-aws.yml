@@ -13,7 +13,7 @@ jobs:
         cloud: '${{github.event.client_payload.cloud}}'
         gprUrl: '${{github.event.client_payload.gprUrl}}'
         customer: '${{github.event.client_payload.customer}}'
-      uses: actions/github-script@0.5.0
+      uses: actions/github-script@v6
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
