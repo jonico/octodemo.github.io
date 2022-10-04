@@ -8,7 +8,7 @@ jobs:
     if: startsWith(github.event.issue.title, 'Create self-hosted runner')
     steps:
       - name: Destroying deployment
-        uses: actions/github-script@v2
+        uses: actions/github-script@v6.3.1
         env:
           title: ${{ github.event.issue.title }}
           body: ${{ github.event.issue.body }}
