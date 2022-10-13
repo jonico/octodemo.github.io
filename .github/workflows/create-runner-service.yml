@@ -17,7 +17,7 @@ jobs:
     steps:
 
     - name: Announce deployment
-      uses: actions/github-script@v2
+      uses: actions/github-script@v6.3.2
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
@@ -63,7 +63,7 @@ jobs:
     
     - name: Update deploy success
       if: (success())
-      uses: actions/github-script@v2
+      uses: actions/github-script@v6.3.2
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
@@ -83,7 +83,7 @@ jobs:
 
     - name: Update deploy failure
       if: (failure())
-      uses: actions/github-script@v2
+      uses: actions/github-script@v6.3.2
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
